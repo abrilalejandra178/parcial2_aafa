@@ -51,4 +51,7 @@ export class Programa {
   @ManyToOne(() => NivelesAcademico, nivelAcademico => nivelAcademico.programas)
   @JoinColumn({ name: 'id_nivel_academico', referencedColumnName: 'id' })
   nivelAcademico: NivelesAcademico;
+
+  @Column('varchar', { length: 100 })
+  area_conocimiento: string;
 }

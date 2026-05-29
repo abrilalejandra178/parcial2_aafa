@@ -18,6 +18,7 @@ export class ProgramasService {
       idNivelAcademico: createProgramaDto.idNivelAcademico,
       nombre: createProgramaDto.nombre,
       descripcion: createProgramaDto.descripcion,
+      area_conocimiento: createProgramaDto.area_conocimiento,
     });
     if (programa)
       throw new ConflictException(

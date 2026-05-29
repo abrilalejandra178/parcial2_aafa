@@ -45,4 +45,10 @@ export class CreateProgramaDto {
   @MaxLength(50, { message: 'El estado no puede tener más de 50 caracteres' })
   @IsDefined({ message: 'El estado es obligatorio' })
   readonly estado: string;
+
+  @ApiProperty()
+  @IsString({ message: 'El área de conocimiento debe ser una cadena de texto' })
+  @MaxLength(100, { message: 'El área de conocimiento no puede tener más de 100 caracteres' })
+  @IsDefined({ message: 'El área de conocimiento es obligatoria' })
+  readonly area_conocimiento: string;
 }
